@@ -64,7 +64,7 @@ export default function RootLayout({
       className="dark"
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background text-text-primary antialiased font-sans">
+      <body className="min-h-screen bg-background text-white antialiased font-sans">
         <div className="flex min-h-screen flex-col">
           {children}
         </div>
