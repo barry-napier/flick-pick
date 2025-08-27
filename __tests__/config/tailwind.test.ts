@@ -62,43 +62,44 @@ describe('Tailwind CSS Configuration', () => {
     expect(colors.popover.DEFAULT).toBe('hsl(var(--popover))')
   })
 
-  it('should have swipe animations defined', () => {
+  it('should have performance-optimized swipe animations defined', () => {
     const { animation } = tailwindConfig.theme.extend
     
-    expect(animation['swipe-right']).toBe('swipeRight 0.5s ease-out')
-    expect(animation['swipe-left']).toBe('swipeLeft 0.5s ease-out')
-    expect(animation['swipe-up']).toBe('swipeUp 0.5s ease-out')
-    expect(animation['card-enter']).toBe('cardEnter 0.3s ease-out')
+    // Check for optimized cubic-bezier timing functions
+    expect(animation['swipe-right']).toBe('swipeRight 0.3s cubic-bezier(0.4, 0.0, 0.2, 1)')
+    expect(animation['swipe-left']).toBe('swipeLeft 0.3s cubic-bezier(0.4, 0.0, 0.2, 1)')
+    expect(animation['swipe-up']).toBe('swipeUp 0.3s cubic-bezier(0.4, 0.0, 0.2, 1)')
+    expect(animation['card-enter']).toBe('cardEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1)')
     expect(animation['fade-in']).toBe('fadeIn 0.3s ease-in-out')
-    expect(animation['slide-up']).toBe('slideUp 0.3s ease-out')
+    expect(animation['slide-up']).toBe('slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1)')
   })
 
-  it('should have corresponding keyframes for animations', () => {
+  it('should have hardware-accelerated keyframes for animations', () => {
     const { keyframes } = tailwindConfig.theme.extend
     
-    // Swipe right animation
-    expect(keyframes.swipeRight['0%']).toBe('transform: translateX(0) rotate(0deg), opacity: 1')
-    expect(keyframes.swipeRight['100%']).toBe('transform: translateX(100vw) rotate(20deg), opacity: 0')
+    // Swipe right animation with hardware acceleration
+    expect(keyframes.swipeRight['0%']).toBe('transform: translateX(0) rotate(0deg) translateZ(0), opacity: 1')
+    expect(keyframes.swipeRight['100%']).toBe('transform: translateX(150vw) rotate(25deg) translateZ(0), opacity: 0')
     
-    // Swipe left animation  
-    expect(keyframes.swipeLeft['0%']).toBe('transform: translateX(0) rotate(0deg), opacity: 1')
-    expect(keyframes.swipeLeft['100%']).toBe('transform: translateX(-100vw) rotate(-20deg), opacity: 0')
+    // Swipe left animation with hardware acceleration
+    expect(keyframes.swipeLeft['0%']).toBe('transform: translateX(0) rotate(0deg) translateZ(0), opacity: 1')
+    expect(keyframes.swipeLeft['100%']).toBe('transform: translateX(-150vw) rotate(-25deg) translateZ(0), opacity: 0')
     
-    // Swipe up animation
-    expect(keyframes.swipeUp['0%']).toBe('transform: translateY(0) scale(1), opacity: 1')
-    expect(keyframes.swipeUp['100%']).toBe('transform: translateY(-100vh) scale(0.8), opacity: 0')
+    // Swipe up animation with hardware acceleration
+    expect(keyframes.swipeUp['0%']).toBe('transform: translateY(0) scale(1) translateZ(0), opacity: 1')
+    expect(keyframes.swipeUp['100%']).toBe('transform: translateY(-120vh) scale(0.7) translateZ(0), opacity: 0')
     
-    // Card enter animation
-    expect(keyframes.cardEnter['0%']).toBe('transform: scale(0.8), opacity: 0')
-    expect(keyframes.cardEnter['100%']).toBe('transform: scale(1), opacity: 1')
+    // Enhanced card enter animation
+    expect(keyframes.cardEnter['0%']).toBe('transform: scale(0.85) translateY(40px) translateZ(0), opacity: 0')
+    expect(keyframes.cardEnter['100%']).toBe('transform: scale(1) translateY(0) translateZ(0), opacity: 1')
     
     // Fade in animation
     expect(keyframes.fadeIn['0%']).toBe('opacity: 0')
     expect(keyframes.fadeIn['100%']).toBe('opacity: 1')
     
-    // Slide up animation
-    expect(keyframes.slideUp['0%']).toBe('transform: translateY(20px), opacity: 0')
-    expect(keyframes.slideUp['100%']).toBe('transform: translateY(0), opacity: 1')
+    // Slide up animation with hardware acceleration
+    expect(keyframes.slideUp['0%']).toBe('transform: translateY(20px) translateZ(0), opacity: 0')
+    expect(keyframes.slideUp['100%']).toBe('transform: translateY(0) translateZ(0), opacity: 1')
   })
 
   it('should have custom border radius values', () => {
