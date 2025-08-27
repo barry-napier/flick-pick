@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Movie {
+  id            String   @id // TMDB ID
+  title         String
+  posterPath    String?
+  backdropPath  String?
+  overview      String
+  releaseDate   DateTime
+  runtime       Int?     // in minutes
+  voteAverage   Float
+  voteCount     Int
+  popularity    Float
+  genres        Genre[]
+  mediaType     String   // movie | tv
+  cached        DateTime @default(now())
+  votes         Vote[]
+  
+  @@index([popularity])
+  @@index([mediaType])
+  @@index([cached])
+}
+
+model Genre {
+  id      Int     @id
+  name    String  @unique
+  movies  Movie[]
+}
+
+model Vote {
+  id            String   @id @default(cuid())
+  movieId       String
+  movie         Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  voteType      String   // upvote | skip | not_seen
+  deviceId      String
+  timestamp     DateTime @default(now())
+  sessionId     String   // For "For You" recommendations
+  
+  @@unique([movieId, deviceId])
+  @@index([deviceId, timestamp])
+  @@index([sessionId])
+  @@index([voteType])
+}
+
+model UserPreferences {
+  deviceId        String   @id
+  favoriteGenres  String   // JSON string of genre IDs array
+  lastSeen        DateTime @default(now())
+  totalVotes      Int      @default(0)
+  
+  @@index([lastSeen])
+}
+
+model TrendingCache {
+  id            String   @id @default(cuid())
+  movieId       String
+  period        String   // daily | weekly | monthly
+  voteCount     Int
+  rank          Int
+  changePercent Float?
+  updatedAt     DateTime @default(now())
+  
+  @@unique([movieId, period])
+  @@index([period, rank])
+  @@index([updatedAt])
+}
