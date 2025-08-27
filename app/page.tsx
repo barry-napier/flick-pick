@@ -29,6 +29,12 @@ export default function HomePage() {
           <p className="text-xs text-gray-500">
             Background: {'{'}bg-background{'}'} | Card: {'{'}bg-card{'}'}
           </p>
+          <p className="text-xs text-gray-500">
+            Environment: {process.env.NODE_ENV || 'development'}
+          </p>
+          <p className="text-xs text-gray-500">
+            TMDB API: {process.env.NEXT_PUBLIC_TMDB_API_KEY ? '✅ Configured' : '❌ Missing'}
+          </p>
         </div>
       </div>
     </main>
