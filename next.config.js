@@ -47,15 +47,6 @@ const nextConfig = {
       },
     ];
   },
-  
-  // Bundle analyzer
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
-      const { BundleAnalyzerPlugin } = require('@next/bundle-analyzer')();
-      config.plugins.push(new BundleAnalyzerPlugin());
-      return config;
-    },
-  }),
 };
 
 module.exports = nextConfig;
