@@ -6,7 +6,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Project Infrastructure (Critical Path)**
 
-**Task 1.1: Project Initialization and Core Setup**
+**Task 1.1: Project Initialization and Core Setup** → [GitHub Issue #2](https://github.com/barry-napier/flick-pick/issues/2)
 - **Agent**: `technical-architect`
 - **Dependencies**: None (blocking task)
 - **Effort**: 4 hours
@@ -17,7 +17,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - App Router structure in place
   - Package.json with all required dependencies
 
-**Task 1.2: Tailwind CSS and Design System Setup**
+**Task 1.2: Tailwind CSS and Design System Setup** → [GitHub Issue #6](https://github.com/barry-napier/flick-pick/issues/6)
 - **Agent**: `ui-ux-designer`
 - **Dependencies**: Task 1.1
 - **Effort**: 6 hours
@@ -28,7 +28,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Responsive breakpoints defined
   - CSS custom properties for consistent spacing
 
-**Task 1.3: Database Schema and Prisma Setup**
+**Task 1.3: Database Schema and Prisma Setup** → [GitHub Issue #10](https://github.com/barry-napier/flick-pick/issues/10)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 1.1
 - **Effort**: 5 hours
@@ -39,7 +39,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Database indexes optimized for query patterns
   - Migration and seed scripts working
 
-**Task 1.4: Component Library Foundation**
+**Task 1.4: Component Library Foundation** → [GitHub Issue #13](https://github.com/barry-napier/flick-pick/issues/13)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 1.2
 - **Effort**: 4 hours
@@ -52,7 +52,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **API Integration Setup**
 
-**Task 1.5: TMDB API Client Implementation**
+**Task 1.5: TMDB API Client Implementation** → [GitHub Issue #16](https://github.com/barry-napier/flick-pick/issues/16)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 1.3
 - **Effort**: 6 hours
@@ -63,7 +63,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Image URL building utilities
   - Genre mapping and data transformation
 
-**Task 1.6: Environment Configuration and Security**
+**Task 1.6: Environment Configuration and Security** → [GitHub Issue #19](https://github.com/barry-napier/flick-pick/issues/19)
 - **Agent**: `security-guardian`
 - **Dependencies**: Task 1.1
 - **Effort**: 3 hours
@@ -78,7 +78,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Movie Card System (Critical Path)**
 
-**Task 2.1: MovieCard Component with Visual Design**
+**Task 2.1: MovieCard Component with Visual Design** → [GitHub Issue #4](https://github.com/barry-napier/flick-pick/issues/4)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 1.4
 - **Effort**: 8 hours
@@ -90,7 +90,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Responsive design for mobile/desktop
   - Loading skeleton states
 
-**Task 2.2: Swipe Gesture Detection and Animation**
+**Task 2.2: Swipe Gesture Detection and Animation** → [GitHub Issue #9](https://github.com/barry-napier/flick-pick/issues/9)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 2.1
 - **Effort**: 12 hours
@@ -102,7 +102,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - 60fps performance target met
   - Visual feedback overlays (green/red/blue)
 
-**Task 2.3: Card Stack Management**
+**Task 2.3: Card Stack Management** → [GitHub Issue #15](https://github.com/barry-napier/flick-pick/issues/15)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 2.2
 - **Effort**: 6 hours
@@ -116,7 +116,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Navigation and Routing**
 
-**Task 2.4: Top Navigation Tabs**
+**Task 2.4: Top Navigation Tabs** → [GitHub Issue #1](https://github.com/barry-napier/flick-pick/issues/1)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 1.4
 - **Effort**: 4 hours
@@ -127,7 +127,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Active/inactive states matching design
   - Tab state persistence across navigation
 
-**Task 2.5: Bottom Tab Navigation**
+**Task 2.5: Bottom Tab Navigation** → [GitHub Issue #5](https://github.com/barry-napier/flick-pick/issues/5)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 1.4
 - **Effort**: 3 hours
@@ -140,7 +140,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Data Layer and Voting**
 
-**Task 2.6: Voting System API**
+**Task 2.6: Voting System API** → [GitHub Issue #8](https://github.com/barry-napier/flick-pick/issues/8)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 1.5
 - **Effort**: 8 hours
@@ -152,7 +152,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Session tracking for recommendations
   - Rate limiting: 100 votes/device/day
 
-**Task 2.7: Movie Data API Endpoints**
+**Task 2.7: Movie Data API Endpoints** → [GitHub Issue #12](https://github.com/barry-napier/flick-pick/issues/12)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 1.5
 - **Effort**: 10 hours
@@ -168,7 +168,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Device Fingerprinting and User Identity**
 
-**Task 3.1: Device Fingerprinting Implementation**
+**Task 3.1: Device Fingerprinting Implementation** → [GitHub Issue #3](https://github.com/barry-napier/flick-pick/issues/3)
 - **Agent**: `security-guardian`
 - **Dependencies**: Task 1.6
 - **Effort**: 6 hours
@@ -179,7 +179,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Privacy compliance (no PII collection)
   - Fallback strategies for blocked fingerprinting
 
-**Task 3.2: User Preferences and History**
+**Task 3.2: User Preferences and History** → [GitHub Issue #7](https://github.com/barry-napier/flick-pick/issues/7)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 3.1, Task 2.6
 - **Effort**: 5 hours
@@ -192,7 +192,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Recommendation Engine**
 
-**Task 3.3: "For You" Recommendation Algorithm**
+**Task 3.3: "For You" Recommendation Algorithm** → [GitHub Issue #11](https://github.com/barry-napier/flick-pick/issues/11)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 3.2
 - **Effort**: 10 hours
@@ -204,7 +204,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Cold start handling (new users)
   - API endpoint: GET /api/recommendations/for-you
 
-**Task 3.4: Trending and Popularity Calculation**
+**Task 3.4: Trending and Popularity Calculation** → [GitHub Issue #14](https://github.com/barry-napier/flick-pick/issues/14)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 2.7
 - **Effort**: 6 hours
@@ -217,7 +217,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Performance Optimization**
 
-**Task 3.5: Image Loading and Optimization**
+**Task 3.5: Image Loading and Optimization** → [GitHub Issue #20](https://github.com/barry-napier/flick-pick/issues/20)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 2.1
 - **Effort**: 4 hours
@@ -228,7 +228,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Responsive sizing for different screens
   - Preloading strategy for next 3 cards
 
-**Task 3.6: Data Caching and Background Sync**
+**Task 3.6: Data Caching and Background Sync** → [GitHub Issue #21](https://github.com/barry-napier/flick-pick/issues/21)
 - **Agent**: `nextjs-api-developer`
 - **Dependencies**: Task 2.7
 - **Effort**: 5 hours
@@ -243,7 +243,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Animation and Interactions**
 
-**Task 4.1: Advanced Swipe Animations**
+**Task 4.1: Advanced Swipe Animations** → [GitHub Issue #17](https://github.com/barry-napier/flick-pick/issues/17)
 - **Agent**: `ui-ux-designer`
 - **Dependencies**: Task 2.2
 - **Effort**: 8 hours
@@ -255,7 +255,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Card stack depth animations
   - Reduced motion support for accessibility
 
-**Task 4.2: Loading States and Skeletons**
+**Task 4.2: Loading States and Skeletons** → [GitHub Issue #18](https://github.com/barry-napier/flick-pick/issues/18)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 2.1
 - **Effort**: 4 hours
@@ -268,7 +268,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Error Handling and Resilience**
 
-**Task 4.3: Error Boundaries and Fallbacks**
+**Task 4.3: Error Boundaries and Fallbacks** → [GitHub Issue #22](https://github.com/barry-napier/flick-pick/issues/22)
 - **Agent**: `nextjs-ui-builder`
 - **Dependencies**: Task 2.4, Task 2.5
 - **Effort**: 5 hours
@@ -279,7 +279,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Offline state detection and messaging
   - Retry mechanisms for failed requests
 
-**Task 4.4: Performance Monitoring Setup**
+**Task 4.4: Performance Monitoring Setup** → [GitHub Issue #23](https://github.com/barry-napier/flick-pick/issues/23)
 - **Agent**: `technical-architect`
 - **Dependencies**: Task 1.1
 - **Effort**: 3 hours
@@ -294,7 +294,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Testing Implementation**
 
-**Task 5.1: Unit Testing Suite**
+**Task 5.1: Unit Testing Suite** → [GitHub Issue #24](https://github.com/barry-napier/flick-pick/issues/24)
 - **Agent**: `testing-qa-engineer`
 - **Dependencies**: Task 2.2, Task 2.6
 - **Effort**: 12 hours
@@ -306,7 +306,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - API response parsing tests
   - Mock TMDB API responses
 
-**Task 5.2: Integration Testing**
+**Task 5.2: Integration Testing** → [GitHub Issue #25](https://github.com/barry-napier/flick-pick/issues/25)
 - **Agent**: `testing-qa-engineer`
 - **Dependencies**: Task 2.7, Task 3.3
 - **Effort**: 8 hours
@@ -317,7 +317,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Recommendation algorithm tests
   - Error condition testing
 
-**Task 5.3: End-to-End Testing**
+**Task 5.3: End-to-End Testing** → [GitHub Issue #26](https://github.com/barry-napier/flick-pick/issues/26)
 - **Agent**: `testing-qa-engineer`
 - **Dependencies**: Task 2.4, Task 2.5
 - **Effort**: 10 hours
@@ -330,7 +330,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Security Audit and Hardening**
 
-**Task 5.4: Security Audit and Penetration Testing**
+**Task 5.4: Security Audit and Penetration Testing** → [GitHub Issue #27](https://github.com/barry-napier/flick-pick/issues/27)
 - **Agent**: `security-guardian`
 - **Dependencies**: Task 1.6, Task 3.1
 - **Effort**: 6 hours
@@ -342,7 +342,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Rate limiting validation
   - API key security audit
 
-**Task 5.5: Performance Testing and Optimization**
+**Task 5.5: Performance Testing and Optimization** → [GitHub Issue #32](https://github.com/barry-napier/flick-pick/issues/32)
 - **Agent**: `testing-qa-engineer`
 - **Dependencies**: Task 4.1
 - **Effort**: 6 hours
@@ -358,7 +358,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Production Deployment**
 
-**Task 6.1: Vercel Production Configuration**
+**Task 6.1: Vercel Production Configuration** → [GitHub Issue #28](https://github.com/barry-napier/flick-pick/issues/28)
 - **Agent**: `technical-architect`
 - **Dependencies**: Task 4.4
 - **Effort**: 4 hours
@@ -370,7 +370,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - Database migration strategy
   - CDN configuration for images
 
-**Task 6.2: CI/CD Pipeline Setup**
+**Task 6.2: CI/CD Pipeline Setup** → [GitHub Issue #29](https://github.com/barry-napier/flick-pick/issues/29)
 - **Agent**: `technical-architect`
 - **Dependencies**: Task 5.1, Task 5.3
 - **Effort**: 5 hours
@@ -384,7 +384,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
 
 ### **Monitoring and Analytics**
 
-**Task 6.3: Production Monitoring Setup**
+**Task 6.3: Production Monitoring Setup** → [GitHub Issue #30](https://github.com/barry-napier/flick-pick/issues/30)
 - **Agent**: `technical-architect`
 - **Dependencies**: Task 6.1
 - **Effort**: 3 hours
@@ -396,7 +396,7 @@ Based on the comprehensive PRD and technical specifications, here's the detailed
   - User analytics dashboard
   - Database performance monitoring
 
-**Task 6.4: Launch Preparation and Documentation**
+**Task 6.4: Launch Preparation and Documentation** → [GitHub Issue #31](https://github.com/barry-napier/flick-pick/issues/31)
 - **Agent**: `general-purpose`
 - **Dependencies**: Task 6.2
 - **Effort**: 4 hours
